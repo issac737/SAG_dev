@@ -1,0 +1,2264 @@
+{
+  "test_info": {
+    "timestamp": "20251022_114205",
+    "config": {
+      "source_config_id": "d542d956-0ded-43ac-ac1b-a880fe40d267",
+      "query": "AI在医疗诊断中的应用和挑战",
+      "key_similarity_threshold": 0.4,
+      "event_similarity_threshold": 0.2,
+      "max_keys": 15,
+      "max_events": 30,
+      "final_key_threshold": 0.3,
+      "top_n_keys": 8
+    }
+  },
+  "results": {
+    "key_final": [
+      {
+        "key_id": "bf5a1ee3-e232-4d3e-8135-c45428a5eafc",
+        "name": "预测",
+        "type": "action",
+        "weight": 13.460959241614828,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "27073d37-4ca0-4691-9aaf-0ab719acf802",
+        "name": "监测",
+        "type": "action",
+        "weight": 6.688973975110356,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "dfcec29c-dd6e-454c-aea1-23aba4e8d62c",
+        "name": "AI",
+        "type": "tags",
+        "weight": 6.688973975110356,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "4c5a30d6-6b06-4d46-ae24-67c5e4c7b77d",
+        "name": "患者",
+        "type": "person",
+        "weight": 6.2351522286685075,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "e3df907a-0d27-4ee2-9263-c252d9575233",
+        "name": "AI技术",
+        "type": "topic",
+        "weight": 3.9199231395308654,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "155f16ae-d159-4e20-b6e2-276eb58c2da3",
+        "name": "诊断技术",
+        "type": "tags",
+        "weight": 3.8045912749802997,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "7607829e-ae47-4b24-8598-8360476a3570",
+        "name": "识别",
+        "type": "action",
+        "weight": 3.8045912749802997,
+        "steps": [
+          1
+        ]
+      },
+      {
+        "key_id": "8d25a998-eda8-4b42-ad73-a8249cc0ac9e",
+        "name": "病理分析",
+        "type": "topic",
+        "weight": 3.8045912749802997,
+        "steps": [
+          1
+        ]
+      }
+    ],
+    "key_query_related": [
+      {
+        "entity_id": "e3df907a-0d27-4ee2-9263-c252d9575233",
+        "name": "AI技术",
+        "type": "topic",
+        "similarity": 0.8612223,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "edd6f335-aabf-4553-96bd-16950be7f787",
+        "name": "AI医疗",
+        "type": "topic",
+        "similarity": 0.81339896,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "77e7e061-9136-4ced-874b-fdc3809686b5",
+        "name": "AI医疗技术",
+        "type": "topic",
+        "similarity": 0.80862266,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "b43af7ff-ab1f-4ca3-8cfe-60e2c3fc50ed",
+        "name": "AI辅助诊断",
+        "type": "topic",
+        "similarity": 0.8031834,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "d76c88a6-c3b5-4201-a1e2-40b2c53c526c",
+        "name": "AI应用",
+        "type": "topic",
+        "similarity": 0.7624136,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "f9fcd66d-3210-478e-86d6-68b0dd386bf2",
+        "name": "虚拟健康助手",
+        "type": "topic",
+        "similarity": 0.744069,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "130389dc-779d-4178-8b8f-825a68b723be",
+        "name": "可穿戴设备",
+        "type": "topic",
+        "similarity": 0.7146661,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "d9d226f2-6c14-4706-9f78-8c27ff833eef",
+        "name": "智能健康管理",
+        "type": "topic",
+        "similarity": 0.7028804,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "d70ee253-6aa2-412a-bb3f-20b5c752b9ab",
+        "name": "医学影像",
+        "type": "topic",
+        "similarity": 0.68375754,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "fca2e6d4-dca9-44f1-aa36-8f89bb8e95b9",
+        "name": "精准医疗",
+        "type": "topic",
+        "similarity": 0.6801059,
+        "source_attribute": "AI",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "946c144c-a918-42af-af76-91f1c608e52d",
+        "name": "医疗行业",
+        "type": "topic",
+        "similarity": 0.8738048,
+        "source_attribute": "医疗诊断",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "8d25a998-eda8-4b42-ad73-a8249cc0ac9e",
+        "name": "病理分析",
+        "type": "topic",
+        "similarity": 0.85196674,
+        "source_attribute": "医疗诊断",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "ef6688ff-9a92-443b-9584-ad9972aa3c46",
+        "name": "个性化治疗",
+        "type": "topic",
+        "similarity": 0.80913675,
+        "source_attribute": "医疗诊断",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "313a598e-5d5e-43bf-9aef-c2aa7443a219",
+        "name": "药物研发",
+        "type": "topic",
+        "similarity": 0.8001476,
+        "source_attribute": "医疗诊断",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      },
+      {
+        "entity_id": "cbc2ca7f-2a09-4a8f-adf6-b1de8e20b621",
+        "name": "分析",
+        "type": "action",
+        "similarity": 0.8199227,
+        "source_attribute": "应用",
+        "type_threshold": 0.2,
+        "final_threshold": 0.4
+      }
+    ],
+    "event_key_query_related": [
+      "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+      "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+      "1217f07f-b9aa-430a-899a-7db189573725",
+      "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+      "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+      "8659a594-e878-4630-a72e-fb758695df79",
+      "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+      "51ba2032-05bb-4682-8cbe-cfb9a2e84190"
+    ],
+    "event_query_related": [
+      {
+        "event_id": "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+        "title": "AI医疗面临的挑战",
+        "summary": "AI医疗技术面临数据隐私、算法透明度、监管合规、数据质量、伦理问题和技术成熟度等挑战。",
+        "similarity": 0.8245448,
+        "match_type": "content"
+      },
+      {
+        "event_id": "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+        "title": "AI技术在医疗行业的影响",
+        "summary": "AI技术正在改变医疗行业，提高诊疗质量、降低成本、扩大服务可及性，但需伦理、监管和实践的协调。",
+        "similarity": 0.79600155,
+        "match_type": "content"
+      },
+      {
+        "event_id": "1217f07f-b9aa-430a-899a-7db189573725",
+        "title": "AI医疗的未来展望",
+        "summary": "未来10年内，AI医疗技术将通过多模态AI、联邦学习、边缘计算、数字孪生和脑机接口等方式快速发展。",
+        "similarity": 0.7868958,
+        "match_type": "content"
+      },
+      {
+        "event_id": "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+        "title": "精准医疗与个性化治疗的发展",
+        "summary": "AI技术通过分析患者数据，实现疾病预测、治疗方案优化和药物反应评估。",
+        "similarity": 0.7797212,
+        "match_type": "content"
+      },
+      {
+        "event_id": "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+        "title": "智能健康管理的新趋势",
+        "summary": "AI驱动的可穿戴设备和虚拟健康助手提高了健康监测和医疗服务的可及性。",
+        "similarity": 0.75911427,
+        "match_type": "content"
+      },
+      {
+        "event_id": "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+        "title": "AI辅助诊断系统的应用",
+        "summary": "探讨了AI在医学影像和病理分析中的应用，提高诊断准确性和效率。",
+        "similarity": 0.756981,
+        "match_type": "content"
+      },
+      {
+        "event_id": "8659a594-e878-4630-a72e-fb758695df79",
+        "title": "医疗资源优化应用",
+        "summary": "AI技术在医院运营管理中通过优化床位、人员调度、供应链管理、手术排程和急诊分诊发挥重要作用。",
+        "similarity": 0.7473866,
+        "match_type": "content"
+      },
+      {
+        "event_id": "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+        "title": "AI在药物研发中的应用",
+        "summary": "AI技术通过靶点识别、分子设计、虚拟筛选和临床试验优化，革新药物研发流程。",
+        "similarity": 0.7466366,
+        "match_type": "content"
+      }
+    ],
+    "event_related": [
+      "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+      "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+      "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+      "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+      "8659a594-e878-4630-a72e-fb758695df79",
+      "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+      "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+      "1217f07f-b9aa-430a-899a-7db189573725"
+    ],
+    "key_related": [
+      "089e6c09-5fd2-45f9-95a4-8dfea62bee1a",
+      "16ac3c84-2018-43d5-b4cd-738b54b78489",
+      "20607c5a-d93d-4db0-abb7-75a389a1c41f",
+      "2748c19b-77b9-456d-ae72-866c280e73b1",
+      "3effd035-f66b-45e0-81a8-22e94b3b6d23",
+      "3f3c1937-9534-4538-9289-60330d0c99e0",
+      "6613a0dc-7784-4a09-a06c-90ee1fc37570",
+      "77e7e061-9136-4ced-874b-fdc3809686b5",
+      "7f11158e-df5b-445a-9295-0a30b628bb2a",
+      "afcff812-212c-4181-9a84-7001fdcf283c",
+      "d6b04cde-960d-4d25-afb2-dd882e5083da",
+      "ec4be9ba-9a45-4a87-871f-c532f60dedd5",
+      "27073d37-4ca0-4691-9aaf-0ab719acf802",
+      "38a0588c-b7da-4365-b08d-cb1a83988570",
+      "3e893bc8-b3fe-4e2a-9df7-25ce1d8a462d",
+      "4d0c8131-dc81-491c-9783-a7952ca90ed1",
+      "bf5a1ee3-e232-4d3e-8135-c45428a5eafc",
+      "d0327ba5-d2f1-472e-85b1-88870d19e9a0",
+      "dfcec29c-dd6e-454c-aea1-23aba4e8d62c",
+      "ef6688ff-9a92-443b-9584-ad9972aa3c46",
+      "fca2e6d4-dca9-44f1-aa36-8f89bb8e95b9",
+      "130389dc-779d-4178-8b8f-825a68b723be",
+      "4c5a30d6-6b06-4d46-ae24-67c5e4c7b77d",
+      "7d8b165b-1189-4924-a1fd-b105eb8fd7db",
+      "88612762-57a0-4f01-81a5-d1cf7611116f",
+      "ca70f303-5603-462b-b5f1-1a2cb5bb4a7d",
+      "d9d226f2-6c14-4706-9f78-8c27ff833eef",
+      "f9fcd66d-3210-478e-86d6-68b0dd386bf2",
+      "155f16ae-d159-4e20-b6e2-276eb58c2da3",
+      "7607829e-ae47-4b24-8598-8360476a3570",
+      "8d25a998-eda8-4b42-ad73-a8249cc0ac9e",
+      "b43af7ff-ab1f-4ca3-8cfe-60e2c3fc50ed",
+      "cbc2ca7f-2a09-4a8f-adf6-b1de8e20b621",
+      "d70ee253-6aa2-412a-bb3f-20b5c752b9ab",
+      "f5e30cf5-d099-4872-886a-1c85cbee9f0d",
+      "313a598e-5d5e-43bf-9aef-c2aa7443a219",
+      "4ba98f68-8dc6-4d0b-b23b-7928f080dac9",
+      "4ecfe589-7e06-4cdd-a457-66fed2beee10",
+      "55ca865d-f7b7-4394-8aed-43b448f64c46",
+      "6833522b-d221-4f35-972f-887e52c9fa91",
+      "d76c88a6-c3b5-4201-a1e2-40b2c53c526c",
+      "003f4310-7be6-4d25-8854-3967b3f31b87",
+      "0d1e0122-2900-43bc-b616-bab6bc621205",
+      "0efea5a1-9a88-4b20-affd-c98c7c07ad93",
+      "195ade3b-8ee9-4d40-9388-a3f5a491d6cd",
+      "2cf0c8a6-37c6-4916-914b-6b6761b64f44",
+      "38edbea0-3387-410c-b635-294514db39b7",
+      "49dc823e-746e-4518-ac1e-d1a66b32b635",
+      "4a9fbed3-5fef-407f-876e-5bd6632e9d4f",
+      "53edc606-f757-45b7-a89d-a96b3bae9952",
+      "78d6e03a-6403-4806-a8cf-c7bab8ff4dfc",
+      "946c144c-a918-42af-af76-91f1c608e52d",
+      "9dfebbdd-f068-4baf-b198-5f0170c2bff8",
+      "e3df907a-0d27-4ee2-9263-c252d9575233",
+      "e8d1b001-cdfd-4628-a405-266765e59640",
+      "f740da78-6bd0-4959-9d4a-44dc4c854980",
+      "fae67c62-6846-443c-b4de-ad22714aacfd",
+      "08a55247-84c1-43e6-8bce-6dac6b227504",
+      "1c9083b3-3716-4caa-b204-fe590f60360e",
+      "275fa9db-3c1b-4fbf-8e60-90714905149d",
+      "4c29f5bf-aee9-41e2-b187-0a95a5bc2264",
+      "6055de1e-60ba-477e-885d-f35eafc5a6d7",
+      "ab4a7db9-cabc-40f5-a632-98355117535c",
+      "b0087a1b-64cd-48a4-89a6-cedf36ae981d",
+      "bc824d63-2730-4d9d-9da4-a44058c1749d",
+      "f32c7b26-3a0c-4061-b1fa-8320a85ee42a",
+      "4b90f642-02ab-4fba-bec3-dab3d1e2813f",
+      "81de9687-d8c6-49c4-afd8-be4cda70ee35",
+      "8b4572e2-d5a3-4e1b-9e17-7bf30f75fbdb",
+      "ad76b497-958c-49da-9388-60b72c2343fa",
+      "b2bc61ba-ebe4-4c37-94b9-0e14bcf92dea",
+      "d69dd404-7ba0-4324-be2f-8a6402fedaeb",
+      "d87ac378-154f-4664-82d9-447f22c86fad",
+      "edd6f335-aabf-4553-96bd-16950be7f787"
+    ],
+    "event_key_weights": {
+      "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8": 3.38956961,
+      "9c75d4a6-104c-4cdf-9246-8286dc9ef090": 1.7581008,
+      "79eec0b9-4154-4e49-80dd-dc7d7055ffd9": 3.97434842,
+      "7403c9ea-88f5-4f98-ade7-98bb08ce97db": 5.0260063,
+      "8659a594-e878-4630-a72e-fb758695df79": 1.6347904500000001,
+      "61e9db33-c06e-43a5-8d9c-d876a8e63d6d": 4.65944286,
+      "51ba2032-05bb-4682-8cbe-cfb9a2e84190": 4.04237362,
+      "1217f07f-b9aa-430a-899a-7db189573725": 1.6025206600000002
+    },
+    "event_key_query_weights": {
+      "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8": 2.6981026633928953,
+      "9c75d4a6-104c-4cdf-9246-8286dc9ef090": 1.44963287251584,
+      "79eec0b9-4154-4e49-80dd-dc7d7055ffd9": 2.967393991524172,
+      "7403c9ea-88f5-4f98-ade7-98bb08ce97db": 3.8045912749802997,
+      "8659a594-e878-4630-a72e-fb758695df79": 1.22182047613797,
+      "61e9db33-c06e-43a5-8d9c-d876a8e63d6d": 3.537049565275612,
+      "51ba2032-05bb-4682-8cbe-cfb9a2e84190": 3.151924409834744,
+      "1217f07f-b9aa-430a-899a-7db189573725": 1.2610167767672282
+    },
+    "key_event_weights": {
+      "089e6c09-5fd2-45f9-95a4-8dfea62bee1a": 1.2610167767672282,
+      "16ac3c84-2018-43d5-b4cd-738b54b78489": 1.2610167767672282,
+      "20607c5a-d93d-4db0-abb7-75a389a1c41f": 1.2610167767672282,
+      "2748c19b-77b9-456d-ae72-866c280e73b1": 1.2610167767672282,
+      "3effd035-f66b-45e0-81a8-22e94b3b6d23": 1.2610167767672282,
+      "3f3c1937-9534-4538-9289-60330d0c99e0": 1.2610167767672282,
+      "6613a0dc-7784-4a09-a06c-90ee1fc37570": 1.2610167767672282,
+      "77e7e061-9136-4ced-874b-fdc3809686b5": 1.2610167767672282,
+      "7f11158e-df5b-445a-9295-0a30b628bb2a": 1.2610167767672282,
+      "afcff812-212c-4181-9a84-7001fdcf283c": 1.2610167767672282,
+      "d6b04cde-960d-4d25-afb2-dd882e5083da": 1.2610167767672282,
+      "ec4be9ba-9a45-4a87-871f-c532f60dedd5": 1.2610167767672282,
+      "27073d37-4ca0-4691-9aaf-0ab719acf802": 6.688973975110356,
+      "38a0588c-b7da-4365-b08d-cb1a83988570": 3.151924409834744,
+      "3e893bc8-b3fe-4e2a-9df7-25ce1d8a462d": 3.151924409834744,
+      "4d0c8131-dc81-491c-9783-a7952ca90ed1": 3.151924409834744,
+      "bf5a1ee3-e232-4d3e-8135-c45428a5eafc": 13.460959241614828,
+      "d0327ba5-d2f1-472e-85b1-88870d19e9a0": 3.151924409834744,
+      "dfcec29c-dd6e-454c-aea1-23aba4e8d62c": 6.688973975110356,
+      "ef6688ff-9a92-443b-9584-ad9972aa3c46": 3.151924409834744,
+      "fca2e6d4-dca9-44f1-aa36-8f89bb8e95b9": 3.151924409834744,
+      "130389dc-779d-4178-8b8f-825a68b723be": 3.537049565275612,
+      "4c5a30d6-6b06-4d46-ae24-67c5e4c7b77d": 6.2351522286685075,
+      "7d8b165b-1189-4924-a1fd-b105eb8fd7db": 3.537049565275612,
+      "88612762-57a0-4f01-81a5-d1cf7611116f": 3.537049565275612,
+      "ca70f303-5603-462b-b5f1-1a2cb5bb4a7d": 3.537049565275612,
+      "d9d226f2-6c14-4706-9f78-8c27ff833eef": 3.537049565275612,
+      "f9fcd66d-3210-478e-86d6-68b0dd386bf2": 3.537049565275612,
+      "155f16ae-d159-4e20-b6e2-276eb58c2da3": 3.8045912749802997,
+      "7607829e-ae47-4b24-8598-8360476a3570": 3.8045912749802997,
+      "8d25a998-eda8-4b42-ad73-a8249cc0ac9e": 3.8045912749802997,
+      "b43af7ff-ab1f-4ca3-8cfe-60e2c3fc50ed": 3.8045912749802997,
+      "cbc2ca7f-2a09-4a8f-adf6-b1de8e20b621": 3.8045912749802997,
+      "d70ee253-6aa2-412a-bb3f-20b5c752b9ab": 3.8045912749802997,
+      "f5e30cf5-d099-4872-886a-1c85cbee9f0d": 3.8045912749802997,
+      "313a598e-5d5e-43bf-9aef-c2aa7443a219": 2.967393991524172,
+      "4ba98f68-8dc6-4d0b-b23b-7928f080dac9": 2.967393991524172,
+      "4ecfe589-7e06-4cdd-a457-66fed2beee10": 2.967393991524172,
+      "55ca865d-f7b7-4394-8aed-43b448f64c46": 2.967393991524172,
+      "6833522b-d221-4f35-972f-887e52c9fa91": 2.967393991524172,
+      "d76c88a6-c3b5-4201-a1e2-40b2c53c526c": 2.967393991524172,
+      "003f4310-7be6-4d25-8854-3967b3f31b87": 2.6981026633928953,
+      "0d1e0122-2900-43bc-b616-bab6bc621205": 2.6981026633928953,
+      "0efea5a1-9a88-4b20-affd-c98c7c07ad93": 2.6981026633928953,
+      "195ade3b-8ee9-4d40-9388-a3f5a491d6cd": 2.6981026633928953,
+      "2cf0c8a6-37c6-4916-914b-6b6761b64f44": 2.6981026633928953,
+      "38edbea0-3387-410c-b635-294514db39b7": 2.6981026633928953,
+      "49dc823e-746e-4518-ac1e-d1a66b32b635": 2.6981026633928953,
+      "4a9fbed3-5fef-407f-876e-5bd6632e9d4f": 2.6981026633928953,
+      "53edc606-f757-45b7-a89d-a96b3bae9952": 2.6981026633928953,
+      "78d6e03a-6403-4806-a8cf-c7bab8ff4dfc": 2.6981026633928953,
+      "946c144c-a918-42af-af76-91f1c608e52d": 2.6981026633928953,
+      "9dfebbdd-f068-4baf-b198-5f0170c2bff8": 2.6981026633928953,
+      "e3df907a-0d27-4ee2-9263-c252d9575233": 3.9199231395308654,
+      "e8d1b001-cdfd-4628-a405-266765e59640": 2.6981026633928953,
+      "f740da78-6bd0-4959-9d4a-44dc4c854980": 2.6981026633928953,
+      "fae67c62-6846-443c-b4de-ad22714aacfd": 2.6981026633928953,
+      "08a55247-84c1-43e6-8bce-6dac6b227504": 1.22182047613797,
+      "1c9083b3-3716-4caa-b204-fe590f60360e": 1.22182047613797,
+      "275fa9db-3c1b-4fbf-8e60-90714905149d": 1.22182047613797,
+      "4c29f5bf-aee9-41e2-b187-0a95a5bc2264": 1.22182047613797,
+      "6055de1e-60ba-477e-885d-f35eafc5a6d7": 1.22182047613797,
+      "ab4a7db9-cabc-40f5-a632-98355117535c": 1.22182047613797,
+      "b0087a1b-64cd-48a4-89a6-cedf36ae981d": 1.22182047613797,
+      "bc824d63-2730-4d9d-9da4-a44058c1749d": 1.22182047613797,
+      "f32c7b26-3a0c-4061-b1fa-8320a85ee42a": 1.22182047613797,
+      "4b90f642-02ab-4fba-bec3-dab3d1e2813f": 1.44963287251584,
+      "81de9687-d8c6-49c4-afd8-be4cda70ee35": 1.44963287251584,
+      "8b4572e2-d5a3-4e1b-9e17-7bf30f75fbdb": 1.44963287251584,
+      "ad76b497-958c-49da-9388-60b72c2343fa": 1.44963287251584,
+      "b2bc61ba-ebe4-4c37-94b9-0e14bcf92dea": 1.44963287251584,
+      "d69dd404-7ba0-4324-be2f-8a6402fedaeb": 1.44963287251584,
+      "d87ac378-154f-4664-82d9-447f22c86fad": 1.44963287251584,
+      "edd6f335-aabf-4553-96bd-16950be7f787": 1.44963287251584
+    }
+  },
+  "detailed_weights": {
+    "step5_event_key_weights": [
+      {
+        "event_id": "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+        "event_title": "AI辅助诊断系统的应用",
+        "event_summary": "探讨了AI在医学影像和病理分析中的应用，提高诊断准确性和效率。",
+        "event_similarity_step3": 0.756981,
+        "event_key_weight": 5.0260063,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+        "event_title": "智能健康管理的新趋势",
+        "event_summary": "AI驱动的可穿戴设备和虚拟健康助手提高了健康监测和医疗服务的可及性。",
+        "event_similarity_step3": 0.75911427,
+        "event_key_weight": 4.65944286,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+        "event_title": "精准医疗与个性化治疗的发展",
+        "event_summary": "AI技术通过分析患者数据，实现疾病预测、治疗方案优化和药物反应评估。",
+        "event_similarity_step3": 0.7797212,
+        "event_key_weight": 4.04237362,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+        "event_title": "AI在药物研发中的应用",
+        "event_summary": "AI技术通过靶点识别、分子设计、虚拟筛选和临床试验优化，革新药物研发流程。",
+        "event_similarity_step3": 0.7466366,
+        "event_key_weight": 3.97434842,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+        "event_title": "AI技术在医疗行业的影响",
+        "event_summary": "AI技术正在改变医疗行业，提高诊疗质量、降低成本、扩大服务可及性，但需伦理、监管和实践的协调。",
+        "event_similarity_step3": 0.79600155,
+        "event_key_weight": 3.38956961,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+        "event_title": "AI医疗面临的挑战",
+        "event_summary": "AI医疗技术面临数据隐私、算法透明度、监管合规、数据质量、伦理问题和技术成熟度等挑战。",
+        "event_similarity_step3": 0.8245448,
+        "event_key_weight": 1.7581008,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "8659a594-e878-4630-a72e-fb758695df79",
+        "event_title": "医疗资源优化应用",
+        "event_summary": "AI技术在医院运营管理中通过优化床位、人员调度、供应链管理、手术排程和急诊分诊发挥重要作用。",
+        "event_similarity_step3": 0.7473866,
+        "event_key_weight": 1.6347904500000001,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      },
+      {
+        "event_id": "1217f07f-b9aa-430a-899a-7db189573725",
+        "event_title": "AI医疗的未来展望",
+        "event_summary": "未来10年内，AI医疗技术将通过多模态AI、联邦学习、边缘计算、数字孪生和脑机接口等方式快速发展。",
+        "event_similarity_step3": 0.7868958,
+        "event_key_weight": 1.6025206600000002,
+        "calculation_formula": "Σ(key_similarities)",
+        "contributing_keys_count": 0
+      }
+    ],
+    "step6_event_key_query_weights": [
+      {
+        "event_id": "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+        "event_title": "AI辅助诊断系统的应用",
+        "step5_event_key_weight": 5.0260063,
+        "step3_query_similarity": 0.756981,
+        "composite_weight": 3.8045912749802997,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 5.0260063,
+          "step3_value": 0.756981,
+          "multiplication": "5.026006 × 0.756981",
+          "result": 3.8045912749802997
+        }
+      },
+      {
+        "event_id": "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+        "event_title": "智能健康管理的新趋势",
+        "step5_event_key_weight": 4.65944286,
+        "step3_query_similarity": 0.75911427,
+        "composite_weight": 3.537049565275612,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 4.65944286,
+          "step3_value": 0.75911427,
+          "multiplication": "4.659443 × 0.759114",
+          "result": 3.537049565275612
+        }
+      },
+      {
+        "event_id": "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+        "event_title": "精准医疗与个性化治疗的发展",
+        "step5_event_key_weight": 4.04237362,
+        "step3_query_similarity": 0.7797212,
+        "composite_weight": 3.151924409834744,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 4.04237362,
+          "step3_value": 0.7797212,
+          "multiplication": "4.042374 × 0.779721",
+          "result": 3.151924409834744
+        }
+      },
+      {
+        "event_id": "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+        "event_title": "AI在药物研发中的应用",
+        "step5_event_key_weight": 3.97434842,
+        "step3_query_similarity": 0.7466366,
+        "composite_weight": 2.967393991524172,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 3.97434842,
+          "step3_value": 0.7466366,
+          "multiplication": "3.974348 × 0.746637",
+          "result": 2.967393991524172
+        }
+      },
+      {
+        "event_id": "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+        "event_title": "AI技术在医疗行业的影响",
+        "step5_event_key_weight": 3.38956961,
+        "step3_query_similarity": 0.79600155,
+        "composite_weight": 2.6981026633928953,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 3.38956961,
+          "step3_value": 0.79600155,
+          "multiplication": "3.389570 × 0.796002",
+          "result": 2.6981026633928953
+        }
+      },
+      {
+        "event_id": "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+        "event_title": "AI医疗面临的挑战",
+        "step5_event_key_weight": 1.7581008,
+        "step3_query_similarity": 0.8245448,
+        "composite_weight": 1.44963287251584,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 1.7581008,
+          "step3_value": 0.8245448,
+          "multiplication": "1.758101 × 0.824545",
+          "result": 1.44963287251584
+        }
+      },
+      {
+        "event_id": "1217f07f-b9aa-430a-899a-7db189573725",
+        "event_title": "AI医疗的未来展望",
+        "step5_event_key_weight": 1.6025206600000002,
+        "step3_query_similarity": 0.7868958,
+        "composite_weight": 1.2610167767672282,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 1.6025206600000002,
+          "step3_value": 0.7868958,
+          "multiplication": "1.602521 × 0.786896",
+          "result": 1.2610167767672282
+        }
+      },
+      {
+        "event_id": "8659a594-e878-4630-a72e-fb758695df79",
+        "event_title": "医疗资源优化应用",
+        "step5_event_key_weight": 1.6347904500000001,
+        "step3_query_similarity": 0.7473866,
+        "composite_weight": 1.22182047613797,
+        "calculation_process": {
+          "formula": "W_event-key(ej) × (e1)j",
+          "step5_value": 1.6347904500000001,
+          "step3_value": 0.7473866,
+          "multiplication": "1.634790 × 0.747387",
+          "result": 1.22182047613797
+        }
+      }
+    ],
+    "step7_key_event_weights": [
+      {
+        "key_id": "bf5a1ee3-e232-4d3e-8135-c45428a5eafc",
+        "key_name": "Key_bf5a1ee3",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 13.460959241614828,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 13.460959241614828
+      },
+      {
+        "key_id": "27073d37-4ca0-4691-9aaf-0ab719acf802",
+        "key_name": "Key_27073d37",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 6.688973975110356,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 6.688973975110356
+      },
+      {
+        "key_id": "dfcec29c-dd6e-454c-aea1-23aba4e8d62c",
+        "key_name": "Key_dfcec29c",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 6.688973975110356,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 6.688973975110356
+      },
+      {
+        "key_id": "4c5a30d6-6b06-4d46-ae24-67c5e4c7b77d",
+        "key_name": "Key_4c5a30d6",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 6.2351522286685075,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 6.2351522286685075
+      },
+      {
+        "key_id": "e3df907a-0d27-4ee2-9263-c252d9575233",
+        "key_name": "AI技术",
+        "key_type": "topic",
+        "initial_similarity": 0.8612223,
+        "final_weight": 3.9199231395308654,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.551581095300093
+      },
+      {
+        "key_id": "155f16ae-d159-4e20-b6e2-276eb58c2da3",
+        "key_name": "Key_155f16ae",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.8045912749802997
+      },
+      {
+        "key_id": "7607829e-ae47-4b24-8598-8360476a3570",
+        "key_name": "Key_7607829e",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.8045912749802997
+      },
+      {
+        "key_id": "8d25a998-eda8-4b42-ad73-a8249cc0ac9e",
+        "key_name": "病理分析",
+        "key_type": "topic",
+        "initial_similarity": 0.85196674,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.4656570454620095
+      },
+      {
+        "key_id": "b43af7ff-ab1f-4ca3-8cfe-60e2c3fc50ed",
+        "key_name": "AI辅助诊断",
+        "key_type": "topic",
+        "initial_similarity": 0.8031834,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.7368898248896825
+      },
+      {
+        "key_id": "cbc2ca7f-2a09-4a8f-adf6-b1de8e20b621",
+        "key_name": "分析",
+        "key_type": "action",
+        "initial_similarity": 0.8199227,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.640182879410827
+      },
+      {
+        "key_id": "d70ee253-6aa2-412a-bb3f-20b5c752b9ab",
+        "key_name": "医学影像",
+        "key_type": "topic",
+        "initial_similarity": 0.68375754,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 5.564240322644632
+      },
+      {
+        "key_id": "f5e30cf5-d099-4872-886a-1c85cbee9f0d",
+        "key_name": "Key_f5e30cf5",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.8045912749802997,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.8045912749802997
+      },
+      {
+        "key_id": "130389dc-779d-4178-8b8f-825a68b723be",
+        "key_name": "可穿戴设备",
+        "key_type": "topic",
+        "initial_similarity": 0.7146661,
+        "final_weight": 3.537049565275612,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.9492337264571695
+      },
+      {
+        "key_id": "7d8b165b-1189-4924-a1fd-b105eb8fd7db",
+        "key_name": "Key_7d8b165b",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.537049565275612,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.537049565275612
+      },
+      {
+        "key_id": "88612762-57a0-4f01-81a5-d1cf7611116f",
+        "key_name": "Key_88612762",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.537049565275612,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.537049565275612
+      },
+      {
+        "key_id": "ca70f303-5603-462b-b5f1-1a2cb5bb4a7d",
+        "key_name": "Key_ca70f303",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.537049565275612,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.537049565275612
+      },
+      {
+        "key_id": "d9d226f2-6c14-4706-9f78-8c27ff833eef",
+        "key_name": "智能健康管理",
+        "key_type": "topic",
+        "initial_similarity": 0.7028804,
+        "final_weight": 3.537049565275612,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 5.03222107954015
+      },
+      {
+        "key_id": "f9fcd66d-3210-478e-86d6-68b0dd386bf2",
+        "key_name": "虚拟健康助手",
+        "key_type": "topic",
+        "initial_similarity": 0.744069,
+        "final_weight": 3.537049565275612,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.753658014613715
+      },
+      {
+        "key_id": "38a0588c-b7da-4365-b08d-cb1a83988570",
+        "key_name": "Key_38a0588c",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.151924409834744,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.151924409834744
+      },
+      {
+        "key_id": "3e893bc8-b3fe-4e2a-9df7-25ce1d8a462d",
+        "key_name": "Key_3e893bc8",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.151924409834744,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.151924409834744
+      },
+      {
+        "key_id": "4d0c8131-dc81-491c-9783-a7952ca90ed1",
+        "key_name": "Key_4d0c8131",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.151924409834744,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.151924409834744
+      },
+      {
+        "key_id": "d0327ba5-d2f1-472e-85b1-88870d19e9a0",
+        "key_name": "Key_d0327ba5",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 3.151924409834744,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.151924409834744
+      },
+      {
+        "key_id": "ef6688ff-9a92-443b-9584-ad9972aa3c46",
+        "key_name": "个性化治疗",
+        "key_type": "topic",
+        "initial_similarity": 0.80913675,
+        "final_weight": 3.151924409834744,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.8954162072538967
+      },
+      {
+        "key_id": "fca2e6d4-dca9-44f1-aa36-8f89bb8e95b9",
+        "key_name": "精准医疗",
+        "key_type": "topic",
+        "initial_similarity": 0.6801059,
+        "final_weight": 3.151924409834744,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 4.634461206460264
+      },
+      {
+        "key_id": "313a598e-5d5e-43bf-9aef-c2aa7443a219",
+        "key_name": "药物研发",
+        "key_type": "topic",
+        "initial_similarity": 0.8001476,
+        "final_weight": 2.967393991524172,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.7085582604061704
+      },
+      {
+        "key_id": "4ba98f68-8dc6-4d0b-b23b-7928f080dac9",
+        "key_name": "Key_4ba98f68",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.967393991524172,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.967393991524172
+      },
+      {
+        "key_id": "4ecfe589-7e06-4cdd-a457-66fed2beee10",
+        "key_name": "Key_4ecfe589",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.967393991524172,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.967393991524172
+      },
+      {
+        "key_id": "55ca865d-f7b7-4394-8aed-43b448f64c46",
+        "key_name": "Key_55ca865d",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.967393991524172,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.967393991524172
+      },
+      {
+        "key_id": "6833522b-d221-4f35-972f-887e52c9fa91",
+        "key_name": "Key_6833522b",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.967393991524172,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.967393991524172
+      },
+      {
+        "key_id": "d76c88a6-c3b5-4201-a1e2-40b2c53c526c",
+        "key_name": "AI应用",
+        "key_type": "topic",
+        "initial_similarity": 0.7624136,
+        "final_weight": 2.967393991524172,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.8921052713699913
+      },
+      {
+        "key_id": "003f4310-7be6-4d25-8854-3967b3f31b87",
+        "key_name": "Key_003f4310",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "0d1e0122-2900-43bc-b616-bab6bc621205",
+        "key_name": "Key_0d1e0122",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "0efea5a1-9a88-4b20-affd-c98c7c07ad93",
+        "key_name": "Key_0efea5a1",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "195ade3b-8ee9-4d40-9388-a3f5a491d6cd",
+        "key_name": "Key_195ade3b",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "2cf0c8a6-37c6-4916-914b-6b6761b64f44",
+        "key_name": "Key_2cf0c8a6",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "38edbea0-3387-410c-b635-294514db39b7",
+        "key_name": "Key_38edbea0",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "49dc823e-746e-4518-ac1e-d1a66b32b635",
+        "key_name": "Key_49dc823e",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "4a9fbed3-5fef-407f-876e-5bd6632e9d4f",
+        "key_name": "Key_4a9fbed3",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "53edc606-f757-45b7-a89d-a96b3bae9952",
+        "key_name": "Key_53edc606",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "78d6e03a-6403-4806-a8cf-c7bab8ff4dfc",
+        "key_name": "Key_78d6e03a",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "946c144c-a918-42af-af76-91f1c608e52d",
+        "key_name": "医疗行业",
+        "key_type": "topic",
+        "initial_similarity": 0.8738048,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 3.087763609667623
+      },
+      {
+        "key_id": "9dfebbdd-f068-4baf-b198-5f0170c2bff8",
+        "key_name": "Key_9dfebbdd",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "e8d1b001-cdfd-4628-a405-266765e59640",
+        "key_name": "Key_e8d1b001",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "f740da78-6bd0-4959-9d4a-44dc4c854980",
+        "key_name": "Key_f740da78",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "fae67c62-6846-443c-b4de-ad22714aacfd",
+        "key_name": "Key_fae67c62",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 2.6981026633928953,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 2.6981026633928953
+      },
+      {
+        "key_id": "4b90f642-02ab-4fba-bec3-dab3d1e2813f",
+        "key_name": "Key_4b90f642",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "81de9687-d8c6-49c4-afd8-be4cda70ee35",
+        "key_name": "Key_81de9687",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "8b4572e2-d5a3-4e1b-9e17-7bf30f75fbdb",
+        "key_name": "Key_8b4572e2",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "ad76b497-958c-49da-9388-60b72c2343fa",
+        "key_name": "Key_ad76b497",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "b2bc61ba-ebe4-4c37-94b9-0e14bcf92dea",
+        "key_name": "Key_b2bc61ba",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "d69dd404-7ba0-4324-be2f-8a6402fedaeb",
+        "key_name": "Key_d69dd404",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "d87ac378-154f-4664-82d9-447f22c86fad",
+        "key_name": "Key_d87ac378",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.44963287251584
+      },
+      {
+        "key_id": "edd6f335-aabf-4553-96bd-16950be7f787",
+        "key_name": "AI医疗",
+        "key_type": "topic",
+        "initial_similarity": 0.81339896,
+        "final_weight": 1.44963287251584,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.7821916965763518
+      },
+      {
+        "key_id": "089e6c09-5fd2-45f9-95a4-8dfea62bee1a",
+        "key_name": "Key_089e6c09",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "16ac3c84-2018-43d5-b4cd-738b54b78489",
+        "key_name": "Key_16ac3c84",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "20607c5a-d93d-4db0-abb7-75a389a1c41f",
+        "key_name": "Key_20607c5a",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "2748c19b-77b9-456d-ae72-866c280e73b1",
+        "key_name": "Key_2748c19b",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "3effd035-f66b-45e0-81a8-22e94b3b6d23",
+        "key_name": "Key_3effd035",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "3f3c1937-9534-4538-9289-60330d0c99e0",
+        "key_name": "Key_3f3c1937",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "6613a0dc-7784-4a09-a06c-90ee1fc37570",
+        "key_name": "Key_6613a0dc",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "77e7e061-9136-4ced-874b-fdc3809686b5",
+        "key_name": "AI医疗技术",
+        "key_type": "topic",
+        "initial_similarity": 0.80862266,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.5594625764843495
+      },
+      {
+        "key_id": "7f11158e-df5b-445a-9295-0a30b628bb2a",
+        "key_name": "Key_7f11158e",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "afcff812-212c-4181-9a84-7001fdcf283c",
+        "key_name": "Key_afcff812",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "d6b04cde-960d-4d25-afb2-dd882e5083da",
+        "key_name": "Key_d6b04cde",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "ec4be9ba-9a45-4a87-871f-c532f60dedd5",
+        "key_name": "Key_ec4be9ba",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.2610167767672282,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.2610167767672282
+      },
+      {
+        "key_id": "08a55247-84c1-43e6-8bce-6dac6b227504",
+        "key_name": "Key_08a55247",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "1c9083b3-3716-4caa-b204-fe590f60360e",
+        "key_name": "Key_1c9083b3",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "275fa9db-3c1b-4fbf-8e60-90714905149d",
+        "key_name": "Key_275fa9db",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "4c29f5bf-aee9-41e2-b187-0a95a5bc2264",
+        "key_name": "Key_4c29f5bf",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "6055de1e-60ba-477e-885d-f35eafc5a6d7",
+        "key_name": "Key_6055de1e",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "ab4a7db9-cabc-40f5-a632-98355117535c",
+        "key_name": "Key_ab4a7db9",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "b0087a1b-64cd-48a4-89a6-cedf36ae981d",
+        "key_name": "Key_b0087a1b",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "bc824d63-2730-4d9d-9da4-a44058c1749d",
+        "key_name": "Key_bc824d63",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      },
+      {
+        "key_id": "f32c7b26-3a0c-4061-b1fa-8320a85ee42a",
+        "key_name": "Key_f32c7b26",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 1.22182047613797,
+        "contributing_events_count": 8,
+        "contributing_events": [
+          "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "8659a594-e878-4630-a72e-fb758695df79",
+          "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "1217f07f-b9aa-430a-899a-7db189573725"
+        ],
+        "calculation_formula": "Σ W_e2(ej) for events containing this key",
+        "weight_amplification": 1.22182047613797
+      }
+    ]
+  },
+  "weight_calculation_process": {
+    "weight_transfer_paths": {
+      "top_key": {
+        "key_id": "bf5a1ee3-e232-4d3e-8135-c45428a5eafc",
+        "key_name": "Key_bf5a1ee3",
+        "key_type": "unknown",
+        "initial_similarity": 0,
+        "final_weight": 13.460959241614828,
+        "weight_amplification": 13.460959241614828
+      },
+      "transfer_path": {
+        "step1_initial_similarity": 0,
+        "step5_event_contribution": 26.087152720000002,
+        "step6_query_multiplication": 20.091532030428763,
+        "step7_final_accumulation": 13.460959241614828
+      },
+      "contributing_events": [
+        {
+          "event_id": "7403c9ea-88f5-4f98-ade7-98bb08ce97db",
+          "event_title": "AI辅助诊断系统的应用",
+          "step5_weight": 5.0260063,
+          "step3_weight": 0.756981,
+          "composite_weight": 3.8045912749802997
+        },
+        {
+          "event_id": "61e9db33-c06e-43a5-8d9c-d876a8e63d6d",
+          "event_title": "智能健康管理的新趋势",
+          "step5_weight": 4.65944286,
+          "step3_weight": 0.75911427,
+          "composite_weight": 3.537049565275612
+        },
+        {
+          "event_id": "51ba2032-05bb-4682-8cbe-cfb9a2e84190",
+          "event_title": "精准医疗与个性化治疗的发展",
+          "step5_weight": 4.04237362,
+          "step3_weight": 0.7797212,
+          "composite_weight": 3.151924409834744
+        },
+        {
+          "event_id": "79eec0b9-4154-4e49-80dd-dc7d7055ffd9",
+          "event_title": "AI在药物研发中的应用",
+          "step5_weight": 3.97434842,
+          "step3_weight": 0.7466366,
+          "composite_weight": 2.967393991524172
+        },
+        {
+          "event_id": "7cee54e5-78fb-44c8-9fdc-3b1ae57af3f8",
+          "event_title": "AI技术在医疗行业的影响",
+          "step5_weight": 3.38956961,
+          "step3_weight": 0.79600155,
+          "composite_weight": 2.6981026633928953
+        },
+        {
+          "event_id": "9c75d4a6-104c-4cdf-9246-8286dc9ef090",
+          "event_title": "AI医疗面临的挑战",
+          "step5_weight": 1.7581008,
+          "step3_weight": 0.8245448,
+          "composite_weight": 1.44963287251584
+        },
+        {
+          "event_id": "1217f07f-b9aa-430a-899a-7db189573725",
+          "event_title": "AI医疗的未来展望",
+          "step5_weight": 1.6025206600000002,
+          "step3_weight": 0.7868958,
+          "composite_weight": 1.2610167767672282
+        },
+        {
+          "event_id": "8659a594-e878-4630-a72e-fb758695df79",
+          "event_title": "医疗资源优化应用",
+          "step5_weight": 1.6347904500000001,
+          "step3_weight": 0.7473866,
+          "composite_weight": 1.22182047613797
+        }
+      ]
+    },
+    "weight_distribution": {
+      "key_weights": {
+        "count": 74,
+        "total": 199.7615178221728,
+        "max": 13.460959241614828,
+        "min": 1.22182047613797,
+        "average": 2.699479970569903,
+        "top_10_average": 5.601693893493641
+      },
+      "event_composite_weights": {
+        "count": 8,
+        "total": 20.091532030428763,
+        "max": 3.8045912749802997,
+        "min": 1.22182047613797,
+        "average": 2.5114415038035953,
+        "top_10_average": 2.5114415038035953
+      },
+      "weight_amplification": {
+        "total_amplification": 0.10057758996562187,
+        "key_to_event_ratio": 0.10810810810810811
+      }
+    }
+  },
+  "statistics": {
+    "total_keys_step1": 15,
+    "total_events_step2": 8,
+    "total_events_step3": 8,
+    "filtered_events_step4": 8,
+    "filtered_keys_step4": 74,
+    "final_keys_count": 8,
+    "weight_calculation_stats": {
+      "total_event_key_weight": 26.087152720000002,
+      "total_event_key_query_weight": 20.091532030428763,
+      "total_key_event_weight": 199.7615178221728,
+      "max_event_key_weight": 5.0260063,
+      "max_event_key_query_weight": 3.8045912749802997,
+      "max_key_event_weight": 13.460959241614828
+    }
+  }
+}

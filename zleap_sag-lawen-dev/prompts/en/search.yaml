@@ -1,0 +1,88 @@
+# Search Module Prompt Templates (English)
+
+event_filter:
+  description: Use LLM to intelligently filter matching events
+  variables:
+    - events_list
+    - query
+    - background
+    - event_count
+    - threshold
+  template: |
+    You are a professional information retrieval assistant. Based on the user's search objective, filter matching events from the following event list.
+    {background}
+    ## Search Objective
+    {query}
+
+    ## Candidate Event List (Total: {event_count})
+
+    {events_list}
+
+    ## Filtering Requirements
+    1. Carefully understand the intent of the search objective
+    2. Evaluate the relevance of each event to the search objective
+    3. Only select events with high relevance (relevance threshold: {threshold})
+    4. Return a list of matching event indices (e.g., [0, 3, 5])
+    5. If no events match, return an empty list []
+
+    ## Output Format
+    Please strictly return results in JSON format, containing the following fields:
+    - matched_indices: List of matching event indices
+    - reasoning: Brief explanation of filtering rationale (optional)
+
+rewrite_and_extract_entities:
+  description: Query rewrite + Focus type identification + Entity recognition
+  variables:
+    - query
+    - current_time
+    - candidates
+    - entity_types
+    - max_entities
+  template: |
+    You are a search analysis expert. Analyze the user's question and determine how to search documents to answer it.
+
+    ## User Question
+    {query}
+
+    ## Current Time
+    {current_time}
+
+    ## Your Task
+
+    We have a document database. You need to identify keywords to search for relevant documents.
+    
+    Output the following:
+
+    **1. rewritten_query** - Rewrite the question
+    Make it clear and formal. If already clear, keep as is.
+
+    **2. entities** - Search keywords
+    These words will be used to search the database directly. Each keyword is a search entry point - missing one means missing relevant documents.
+    
+    Principle: **When in doubt, include it. Better to have more than miss something.**
+    - All proper nouns in the question (person names, places, works, organizations, etc.)
+    - If the question uses references ("the person who...", "she"), find the actual name from candidates
+    - For comparison questions, extract ALL items being compared - missing one loses half the documents
+
+    **3. focus_entity_types** - Search dimensions (clues)
+    What types of entities should we search from? This is the path to the answer. Be broad.
+    
+    **4. target_entity_types** - Target dimensions  
+    What type of entity most likely contains the answer? Used for ranking results.
+
+    ## Available Entity Types
+    {entity_types}
+
+    ## Candidate Entities (from vector search, for reference)
+    {candidates}
+
+    ## Output (JSON)
+    ```json
+    {{
+      "rewritten_query": "...",
+      "entities": ["...", "..."],
+      "focus_entity_types": ["...", "..."],
+      "target_entity_types": ["..."]
+    }}
+    ```
+

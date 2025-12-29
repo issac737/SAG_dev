@@ -1,0 +1,55 @@
+services:
+  # 数据库服务
+  mysql:
+    image: mysql:8.0
+    container_name: dataflow_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: dataflow_root
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-dataflow}
+      MYSQL_USER: dataflow
+      MYSQL_PASSWORD: dataflow_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: >
+      --default-authentication-plugin=mysql_native_password
+      --max-allowed-packet=64M
+      --innodb-buffer-pool-size=512M
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - dataflow_network
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: dataflow_elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms4g -Xmx4g"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test:
+        ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - dataflow_network
+volumes:
+  mysql_data:
+    driver: local
+  es_data:
+    driver: local
+
+networks:
+  dataflow_network:
+    driver: bridge
