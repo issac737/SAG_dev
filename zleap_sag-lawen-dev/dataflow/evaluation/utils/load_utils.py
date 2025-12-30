@@ -22,7 +22,7 @@ class DatasetLoader:
     支持的数据集：musique, hotpotqa, 2wikimultihopqa, sample
     """
 
-    SUPPORTED_DATASETS = ['musique', 'hotpotqa', '2wikimultihopqa', 'sample']
+    SUPPORTED_DATASETS = ['musique', 'hotpotqa', '2wikimultihopqa', 'sample', 'test_hotpotqa']
 
     def __init__(self, dataset_name: str, dataset_dir: Optional[str] = None):
         """
@@ -206,7 +206,7 @@ class DatasetLoader:
 
     def get_gold_docs(self, force_reload: bool = False) -> Optional[List[List[str]]]:
         """
-        提取gold documents（参考 HippoRAG 实现）
+        提取gold documents（兼容所有数据集格式）
 
         Args:
             force_reload: 是否强制重新加载
@@ -223,27 +223,23 @@ class DatasetLoader:
             gold_docs = []
 
             for sample in samples:
-                # hotpotqa, 2wikimultihopqa: 使用 supporting_facts
-                if 'supporting_facts' in sample:
+                gold_doc = []
+
+                # hotpotqa, 2wikimultihopqa: 使用 supporting_facts + context
+                if 'supporting_facts' in sample and 'context' in sample:
                     gold_title = set([item[0] for item in sample['supporting_facts']])
                     gold_title_and_content_list = [
                         item for item in sample['context']
                         if item[0] in gold_title
                     ]
 
-                    # hotpotqa 使用 ''.join，其他使用 ' '.join
-                    if self.dataset_name.startswith('hotpotqa'):
-                        gold_doc = [
-                            item[0] + '\n' + ''.join(item[1])
-                            for item in gold_title_and_content_list
-                        ]
-                    else:
-                        gold_doc = [
-                            item[0] + '\n' + ' '.join(item[1])
-                            for item in gold_title_and_content_list
-                        ]
+                    # hotpotqa: [title, content_list]
+                    if self.dataset_name == 'hotpotqa' or self.dataset_name == 'test_hotpotqa':
+                        gold_doc = [item[0] + '\n' + ''.join(item[1]) for item in gold_title_and_content_list]
+                    else:  # 2wikimultihopqa
+                        gold_doc = [item[0] + '\n' + ' '.join(item[1]) for item in gold_title_and_content_list]
 
-                # musique: 使用 contexts 中的 is_supporting
+                # musique: contexts 中的 is_supporting
                 elif 'contexts' in sample:
                     gold_doc = [
                         item['title'] + '\n' + item['text']
@@ -251,19 +247,12 @@ class DatasetLoader:
                         if item.get('is_supporting', False)
                     ]
 
-                # musique: 使用 paragraphs 中的 is_supporting
+                # musique: paragraphs 中的 is_supporting
                 elif 'paragraphs' in sample:
-                    gold_paragraphs = []
-                    for item in sample['paragraphs']:
-                        if 'is_supporting' in item and item['is_supporting'] is False:
-                            continue
-                        gold_paragraphs.append(item)
-
                     gold_doc = [
-                        item['title'] + '\n' + (
-                            item['text'] if 'text' in item else item.get('paragraph_text', '')
-                        )
-                        for item in gold_paragraphs
+                        item['title'] + '\n' + (item['text'] if 'text' in item else item.get('paragraph_text', ''))
+                        for item in sample['paragraphs']
+                        if item.get('is_supporting', False)
                     ]
 
                 else:
@@ -286,6 +275,74 @@ class DatasetLoader:
             logger.error(f"Failed to extract gold docs: {e}")
             return None
 
+    def get_gold_docs_for_recall(self, force_reload: bool = False, max_length: int = 500, limit: Optional[int] = None) -> Optional[List[List[Dict[str, str]]]]:
+        """
+        获取用于召回率评估的gold docs（带标题和内容）
+
+        Args:
+            force_reload: 是否强制重新加载
+            max_length: 内容最大长度
+            limit: 限制返回的问题数量，None表示返回全部
+
+        Returns:
+            gold docs列表，每个元素是文档列表，文档格式为 {'title': ..., 'content': ...}
+        """
+        if self._gold_docs is not None and not force_reload:
+            gold_docs_list = []
+            for idx, gold_doc in enumerate(self._gold_docs):
+                # 应用 limit
+                if limit is not None and idx >= limit:
+                    break
+                docs = []
+                for doc in gold_doc:
+                    if '\n' in doc:
+                        title, content = doc.split('\n', 1)
+                        docs.append({'title': title, 'content': content[:max_length]})
+                gold_docs_list.append(docs)
+            return gold_docs_list
+
+        # 重新提取
+        samples = self.load_samples(force_reload)
+
+        try:
+            gold_docs_list = []
+
+            for idx, sample in enumerate(samples):
+                # 应用 limit
+                if limit is not None and idx >= limit:
+                    break
+
+                docs = []
+
+                # hotpotqa, 2wikimultihopqa: supporting_facts + context
+                if 'supporting_facts' in sample and 'context' in sample:
+                    gold_title = set([item[0] for item in sample['supporting_facts']])
+                    for item in sample['context']:
+                        if item[0] in gold_title:
+                            content = ''.join(item[1]) if (self.dataset_name == 'hotpotqa' or self.dataset_name == 'test_hotpotqa') else ' '.join(item[1])
+                            docs.append({'title': item[0], 'content': content[:max_length]})
+
+                # musique: contexts
+                elif 'contexts' in sample:
+                    for item in sample['contexts']:
+                        if item.get('is_supporting', False):
+                            docs.append({'title': item['title'], 'content': item['text'][:max_length]})
+
+                # musique: paragraphs
+                elif 'paragraphs' in sample:
+                    for item in sample['paragraphs']:
+                        if item.get('is_supporting', False):
+                            content = item['text'] if 'text' in item else item.get('paragraph_text', '')
+                            docs.append({'title': item['title'], 'content': content[:max_length]})
+
+                gold_docs_list.append(docs)
+
+            return gold_docs_list
+
+        except Exception as e:
+            logger.error(f"Failed to extract gold docs for recall: {e}")
+            return None
+
     def load_all(self, force_reload: bool = False) -> Dict[str, Any]:
         """
         加载所有数据
@@ -296,13 +353,24 @@ class DatasetLoader:
         Returns:
             包含所有数据的字典
         """
+        questions = self.get_questions(force_reload)
+        samples = self.load_samples(force_reload)
+
+        # 提取 paragraphs（如果存在）
+        all_paragraphs = []
+        for sample in samples:
+            all_paragraphs.append(sample.get('paragraphs', []))
+
         return {
             'corpus': self.load_corpus(force_reload),
-            'samples': self.load_samples(force_reload),
+            'samples': samples,
             'docs': self.get_docs(force_reload),
-            'questions': self.get_questions(force_reload),
+            'questions': questions,
+            'answers': self.get_gold_answers(force_reload),  # 添加 answers 字段
+            'paragraphs': all_paragraphs,  # 添加 paragraphs 字段
             'gold_answers': self.get_gold_answers(force_reload),
             'gold_docs': self.get_gold_docs(force_reload),
+            'total_questions': len(questions),  # 添加总问题数
         }
 
     def get_stats(self) -> Dict[str, Any]:
@@ -552,7 +620,7 @@ def get_gold_docs(samples: List[Dict[str, Any]], dataset_name: str = None) -> Li
                 if item[0] in gold_title
             ]
 
-            if dataset_name and dataset_name.startswith('hotpotqa'):
+            if dataset_name and (dataset_name == 'hotpotqa' or dataset_name == 'test_hotpotqa'):
                 gold_doc = [
                     item[0] + '\n' + ''.join(item[1])
                     for item in gold_title_and_content_list
