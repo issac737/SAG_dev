@@ -512,7 +512,7 @@ class DatasetLoader:
             files = sorted(output_path.glob("*.md"), key=lambda p: int(p.stem.split('_part')[-1]))
             if files:
                 last_file = files[-1]
-                with open(last_file, 'r') as f:
+                with open(last_file, 'r', encoding='utf-8') as f:
                     last_chunks = sum(1 for line in f if line.strip().startswith('#') and line.strip() != '#')
                 stats['last_file_chunks'] = last_chunks
 

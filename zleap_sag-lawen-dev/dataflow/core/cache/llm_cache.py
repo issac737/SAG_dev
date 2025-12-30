@@ -1,19 +1,34 @@
 """
-LLM 缓存装饰器 - 基于访问频率的自适应过期策略
+LLM 缓存模块
 
-策略：
-- 15 天内访问次数 < 3 → 自动删除
-- 访问次数 >= 3 → 根据频率给不同的 TTL
-  - 访问 >= 10 次：90 天
-  - 访问 >= 5 次：60 天
-  - 访问 >= 3 次：30 天
+基于 Redis 的 LLM 响应缓存，严格参考 HippoRAG2 实现。
+
+核心功能：
+- 使用 Redis 替代 SQLite，支持分布式部署
+- 无过期机制，缓存永久保存（与 HippoRAG2 一致）
+- 支持异步操作
+- 通过装饰器透明集成到 LLM 客户端
+
+缓存键生成（与 HippoRAG2 完全一致）：
+- messages: 消息列表
+- model: 模型名称
+- seed: 随机种子
+- temperature: 温度参数
+
+使用方式：
+    from dataflow.core.cache import llm_cache
+
+    class MyLLMClient:
+        @llm_cache
+        async def chat(self, messages, temperature=None, **kwargs) -> LLMResponse:
+            # LLM API 调用逻辑
+            ...
 """
 
 import functools
 import hashlib
 import json
-import time
-from typing import Any, Optional
+from typing import Tuple
 
 from dataflow.core.ai.models import LLMResponse, LLMUsage
 from dataflow.core.config import get_settings
@@ -25,121 +40,81 @@ logger = get_logger("ai.cache")
 
 def llm_cache(func):
     """
-    LLM 缓存装饰器（自适应频率策略）
+    LLM 缓存装饰器（严格按照 HippoRAG2 实现）
 
-    缓存结构：
-    {
-        "content": "...",
-        "model": "...",
-        "usage": {...},
-        "finish_reason": "...",
-        "access_count": 5,              # 访问次数
-        "first_access_time": 1234567890, # 首次访问时间戳
-        "last_access_time": 1234567890   # 最后访问时间戳
-    }
+    特性：
+    - 无过期机制，缓存永久保存
+    - 只使用 messages, model, seed, temperature 生成缓存键
+
+    Args:
+        func: 被装饰的异步函数，应返回 LLMResponse 对象
+
+    Returns:
+        包装后的函数，返回 (LLMResponse, bool) 元组
+        - LLMResponse: LLM 响应对象
+        - bool: 是否命中缓存（True=命中，False=未命中）
     """
 
     @functools.wraps(func)
-    async def wrapper(self, *args, **kwargs):
+    async def wrapper(self, *args, **kwargs) -> Tuple[LLMResponse, bool]:
         settings = get_settings()
 
-        # 检查是否启用缓存
+        # 如果缓存未启用，直接调用原函数
         if not settings.llm_cache_enabled:
             logger.debug("LLM 缓存未启用，直接调用")
             result = await func(self, *args, **kwargs)
             return result, False
 
-        # 提取参数
+        # 提取缓存键参数（只使用 HippoRAG2 的 4 个参数）
         messages = kwargs.get("messages") or (args[0] if args else None)
         if messages is None:
-            raise ValueError("Missing required 'messages' parameter for caching.")
+            raise ValueError("Missing required 'messages' parameter for caching")
 
         temperature = kwargs.get("temperature")
-        max_tokens = kwargs.get("max_tokens")
-        top_p = kwargs.get("top_p")
         seed = kwargs.get("seed")
 
         # 使用 self.config 中的默认值
         config = self.config
         model = config.model
         final_temperature = temperature if temperature is not None else config.temperature
-        final_max_tokens = max_tokens if max_tokens is not None else config.max_tokens
-        final_top_p = top_p if top_p is not None else config.top_p
 
-        # 构建缓存键
+        # 构建缓存键（与 HippoRAG2 完全一致）
         key_data = {
             "messages": [{"role": m.role, "content": m.content} for m in messages],
             "model": model,
+            "seed": seed,
             "temperature": final_temperature,
-            "max_tokens": final_max_tokens,
-            "top_p": final_top_p,
         }
-
-        if seed is not None:
-            key_data["seed"] = seed
-
         key_str = json.dumps(key_data, sort_keys=True, ensure_ascii=False)
         key_hash = hashlib.sha256(key_str.encode("utf-8")).hexdigest()
         cache_key = f"{settings.llm_cache_prefix}{key_hash}"
 
-        # 尝试从 Redis 读取缓存
+        # 尝试从缓存读取
         redis_client = get_redis_client()
-        current_time = int(time.time())
 
         try:
             cached_data = await redis_client.get(cache_key)
+
             if cached_data is not None:
-                # 检查是否需要清理（15 天内访问次数 < 3）
-                first_access = cached_data.get("first_access_time", current_time)
-                access_count = cached_data.get("access_count", 0)
-                days_since_first = (current_time - first_access) / 86400
+                # 缓存命中，重建 LLMResponse 对象
+                logger.info(f"缓存命中 - 模型: {model}")
 
-                if days_since_first >= 15 and access_count < 3:
-                    # 低频访问，删除缓存
-                    await redis_client.delete(cache_key)
-                    logger.info(
-                        f"缓存已清理（低频） - 模型: {model}, "
-                        f"15天访问次数: {access_count}"
-                    )
-                    # 继续执行，重新调用 API
-                else:
-                    # 更新访问统计
-                    cached_data["access_count"] = access_count + 1
-                    cached_data["last_access_time"] = current_time
-
-                    # 根据访问频率给不同的 TTL
-                    if access_count >= 10:
-                        ttl = 90 * 86400  # 90 天
-                    elif access_count >= 5:
-                        ttl = 60 * 86400  # 60 天
-                    else:
-                        ttl = 30 * 86400  # 30 天
-
-                    await redis_client.set(cache_key, cached_data, expire=ttl)
-
-                    logger.info(
-                        f"缓存命中 - 模型: {model}, "
-                        f"访问: {cached_data['access_count']}次, "
-                        f"TTL: {ttl // 86400}天"
-                    )
-
-                    # 重构 LLMResponse
-                    response = LLMResponse(
-                        content=cached_data["content"],
-                        model=cached_data["model"],
-                        usage=LLMUsage(**cached_data["usage"]),
-                        finish_reason=cached_data["finish_reason"],
-                    )
-                    return response, True
+                response = LLMResponse(
+                    content=cached_data["content"],
+                    model=cached_data["model"],
+                    usage=LLMUsage(**cached_data["usage"]),
+                    finish_reason=cached_data["finish_reason"],
+                )
+                return response, True
 
         except Exception as e:
             logger.warning(f"读取缓存失败: {e}，将直接调用 LLM")
 
-        # 缓存未命中，调用原始函数
+        # 缓存未命中，调用原函数
         logger.debug(f"缓存未命中 - 模型: {model}")
         result = await func(self, *args, **kwargs)
 
-        # 写入缓存（初始化访问统计）
+        # 将结果写入缓存（无过期时间，永久保存）
         try:
             result_dict = {
                 "content": result.content,
@@ -150,18 +125,12 @@ def llm_cache(func):
                     "total_tokens": result.usage.total_tokens,
                 },
                 "finish_reason": result.finish_reason,
-                # 访问统计
-                "access_count": 1,
-                "first_access_time": current_time,
-                "last_access_time": current_time,
             }
 
-            # 初始 TTL 15 天（观察期）
-            initial_ttl = 15 * 86400
+            # 写入缓存，永久保存
+            await redis_client.set(cache_key, result_dict)
 
-            await redis_client.set(cache_key, result_dict, expire=initial_ttl)
-
-            logger.info(f"已缓存 - 模型: {model}, 初始TTL: 15天")
+            logger.info(f"已缓存 - 模型: {model}（永久保存）")
         except Exception as e:
             logger.warning(f"写入缓存失败: {e}，不影响返回结果")
 
@@ -171,9 +140,16 @@ def llm_cache(func):
 
 
 async def clear_llm_cache(pattern: str = None) -> int:
-    """清理 LLM 缓存"""
-    from dataflow.core.config import get_settings
+    """
+    清除 LLM 缓存
 
+    Args:
+        pattern: 可选的键模式，默认清除所有 LLM 缓存
+                例如: "llm:cache:abc*" 只清除特定前缀的缓存
+
+    Returns:
+        删除的键数量
+    """
     settings = get_settings()
     redis_client = get_redis_client()
     search_pattern = pattern or f"{settings.llm_cache_prefix}*"
