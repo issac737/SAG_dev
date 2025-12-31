@@ -130,13 +130,38 @@ class OpenAIClient(BaseLLMClient):
             #     ],
             # )
 
+            # 🆕 过滤不支持的参数（针对某些API如302.ai）
+            # 记录原始kwargs用于调试
+            if kwargs:
+                logger.debug(f"🔍 原始kwargs: {list(kwargs.keys())}")
+
+            # 白名单：OpenAI SDK支持的通用参数
+            allowed_params = {
+                'top_p', 'frequency_penalty', 'presence_penalty',
+                'stop', 'n', 'stream', 'logprobs', 'top_logprobs',
+                'response_format', 'seed', 'tools', 'tool_choice',
+                'user', 'timeout', 'extra_headers', 'extra_query',
+                'extra_body', 'stream_options'
+            }
+
+            # 过滤kwargs,只保留白名单参数
+            filtered_kwargs = {
+                k: v for k, v in kwargs.items()
+                if k in allowed_params
+            }
+
+            # 如果有参数被过滤,记录警告
+            removed = set(kwargs.keys()) - set(filtered_kwargs.keys())
+            if removed:
+                logger.warning(f"⚠️ 移除不支持的参数: {removed}")
+
             # 调用API（使用 cast 显式类型转换）
             response = await self.client.chat.completions.create(
                 model=self.config.model,
                 messages=cast(Iterable[ChatCompletionMessageParam], api_messages),
                 temperature=temperature or self.config.temperature,
                 max_tokens=max_tokens or self.config.max_tokens,  # 从配置读取，不硬编码
-                **kwargs,
+                **filtered_kwargs,  # 🆕 使用过滤后的kwargs
             )
 
             # 解析响应
@@ -232,6 +257,30 @@ class OpenAIClient(BaseLLMClient):
             # 准备消息
             api_messages = self._prepare_messages(messages)
 
+            # 🆕 过滤不支持的参数（与普通调用保持一致）
+            if kwargs:
+                logger.debug(f"🔍 流式调用原始kwargs: {list(kwargs.keys())}")
+
+            # 白名单：OpenAI SDK支持的通用参数
+            allowed_params = {
+                'top_p', 'frequency_penalty', 'presence_penalty',
+                'stop', 'n', 'stream', 'logprobs', 'top_logprobs',
+                'response_format', 'seed', 'tools', 'tool_choice',
+                'user', 'timeout', 'extra_headers', 'extra_query',
+                'extra_body', 'stream_options'
+            }
+
+            # 过滤kwargs
+            filtered_kwargs = {
+                k: v for k, v in kwargs.items()
+                if k in allowed_params
+            }
+
+            # 如果有参数被过滤,记录警告
+            removed = set(kwargs.keys()) - set(filtered_kwargs.keys())
+            if removed:
+                logger.warning(f"⚠️ 流式调用移除不支持的参数: {removed}")
+
             # 调用流式API（使用 cast 显式类型转换）
             stream = await self.client.chat.completions.create(
                 model=self.config.model,
@@ -239,7 +288,7 @@ class OpenAIClient(BaseLLMClient):
                 temperature=temperature or self.config.temperature,
                 max_tokens=max_tokens or self.config.max_tokens,
                 stream=True,
-                **kwargs,
+                **filtered_kwargs,  # 🆕 使用过滤后的kwargs
             )
 
             # 逐个生成内容片段
